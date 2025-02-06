@@ -6,18 +6,58 @@
     <title>Document</title>
     <link rel="stylesheet" href="./public/css/app.css">
 </head>
+<style>
+        /* .product-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            transition: background 0.3s;
+            position: relative;
+        }
+        .product-card:hover {
+            background-color: #fff3cd;
+        }
+        .product-img {
+            max-width: 100px;
+            margin-bottom: 15px;
+        }
+        .btn-add {
+            border: 1px solid #ff69b4;
+            color: #ff69b4;
+        }
+        .btn-add:hover {
+            background-color: #ff69b4;
+            color: white;
+        }
+        .price-circle {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        } */
+</style>
 <body>
 
     <!-- //////////////////////////// header //////////////////////////////// -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid d-flex justify-content-between">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary position-flex 
+        border border-2 border-bottom" style="border: #ff69b4;">
+            <div class="container-fluid">
               <img src="./img romyk/logo.png" alt="">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+              <div class="collapse navbar-collapse text-center" id="navbarNav">
+                <ul class="navbar-nav m-auto gap-5">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
@@ -34,7 +74,7 @@
                         <a class="nav-link disabled" aria-disabled="true">Blog</a>
                     </li>
                 </ul>
-                <ul class="">
+                <ul class="navbar-nav">
                     <li>
                        <a href="">Login</a> 
                     </li>
@@ -48,29 +88,266 @@
     </header>
     
     <!-- //////////////////////////// Ice cream //////////////////////////////// -->
-    <section class="iceCream container">
-        
+    <section class="iceCream container w-100 h-auto my-5">
+        <div class="row d-flex justify-content-center align align-items-center">
+            <div class="col">
+                <h1>ICE CREAM</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sed ad neque excepturi! Expedita dolore, vel incidunt eum, excepturi maiores culpa dolor sapiente explicabo quo voluptatem perferendis. Iure, eveniet optio!</p>
+                <a class="btn btn-primary" href="#" role="button">Order Now</a>
+            </div>
+            <div class="col">
+                <img class="w-100" src="./src/img/banner-img.png" alt="">
+            </div>
+        </div>
     </section>
 
     <!-- //////////////////////////// About //////////////////////////////// -->
 
-    <section class="about container" id="About"></section>
+    <section class="about container w-100 my-5" id="About">
+        <div class="row">
+            <div class="col ms-5">
+                <img class="w-50 ms-5" style="width: 15em;" src="./src/img/about-img.png" alt="">
+            </div>
+            <div class="col">
+                <h1>About Ice Cream</h1>
+                <p class="my-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis tempora, deserunt nam blanditiis reiciendis quas corrupti natus possimus culpa repellat labore cumque, animi porro corporis non esse harum perferendis at veritatis. Veniam doloremque tenetur, nam rerum est consectetur recusandae cupiditate numquam vero obcaecati voluptatum nobis soluta tempore ab aperiam molestias.</p>
+                <a class="btn btn-primary" href="#" role="button">Read More</a>
+            </div>
+        </div>
+    </section>
 
     <!-- //////////////////////////// Featured //////////////////////////////// -->
     
-    <section class="featured container" id="Featured"></section>
+    <section class="featured container my-5" id="Featured">
+
+            <!-- <div class="row">
+                <div class="col col-mb-4">
+                    <div class=" border shadow">
+                        <div class="price-circle">$10</div>
+                        <img src="https://via.placeholder.com/" alt="Sundae" class="">
+                        <p>Strawberry Ice Cream</p>
+                        <button class="btn btn-add">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col col-mb-4">
+                    <div class="border shadow">
+                        <div class="price-circle">$10</div>
+                        <img src="https://via.placeholder.com/100" alt="Cone" class="product-img">
+                        <p>Strawberry Ice Cream</p>
+                        <button class="btn btn-add">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col col-mb-4">
+                    <div class="border shadow">
+                        <div class="price-circle">$10</div>
+                        <img src="https://via.placeholder.com/100" alt="Sundae" class="product-img">
+                        <p>Strawberry Ice Cream</p>
+                        <button class="btn btn-add">Add To Cart</button>
+                    </div>
+                </div>
+            </div> -->
+
+
+
+        <div class="row gap-4">
+            <div class="product-card col border shadow" style=>
+                <div class="bg-primary justify-content-center d-flex align-items-center p-5">
+                    <img src="./src/img/img-1.png" class="card-img-top" style="width: 15rem;" alt="...">
+                </div>
+                <div class="parentPrixCercle text-center">
+                    <h4 class="prixCercle bg-light">$10</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="card-title mt-5">Strawberry Ice Cream</h4>
+                    <a href="#" class="btn btn-primary my-4">Go somewhere</a>
+                </div>
+            </div>
+            <div class="product-card col border shadow" style=>
+                <div class="bg-primary justify-content-center d-flex align-items-center p-5">
+                    <img src="./src/img/img-1.png" class="card-img-top" style="width: 15rem;" alt="...">
+                </div>
+                <div class="text-center">
+                    <h4 class="bg-danger">$10</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="card-title mb-4">Strawberry Ice Cream</h4>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="product-card col border shadow" style=>
+                <div class="bg-primary justify-content-center d-flex align-items-center p-5">
+                    <img src="./src/img/img-1.png" class="card-img-top" style="width: 15rem;" alt="...">
+                </div>
+                <div class="text-center">
+                    <h4 class="bg-danger">$10</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="card-title mb-4">Strawberry Ice Cream</h4>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="product-card col border shadow" style=>
+                <div class="bg-primary justify-content-center d-flex align-items-center p-5">
+                    <img src="./src/img/img-1.png" class="card-img-top" style="width: 15rem;" alt="...">
+                </div>
+                <div class="text-center">
+                    <h4 class="bg-danger">$10</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="card-title mb-4">Strawberry Ice Cream</h4>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="product-card col border shadow" style=>
+                <div class="bg-primary justify-content-center d-flex align-items-center p-5">
+                    <img src="./src/img/img-1.png" class="card-img-top" style="width: 15rem;" alt="...">
+                </div>
+                <div class="text-center">
+                    <h4 class="bg-danger">$10</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="card-title mb-4">Strawberry Ice Cream</h4>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="product-card col border shadow" style=>
+                <div class="bg-primary justify-content-center d-flex align-items-center p-5">
+                    <img src="./src/img/img-1.png" class="card-img-top" style="width: 15rem;" alt="...">
+                </div>
+                <div class="text-center">
+                    <h4 class="bg-danger">$10</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="card-title mb-4">Strawberry Ice Cream</h4>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="justify-content-center d-flex align-items m-5">
+            <a class="btn btn-primary" href="#" role="button">Order Now</a>
+        </div>
+       
+    
+    </section>
 
     <!-- //////////////////////////// Services //////////////////////////////// -->
 
-    <section class="services container" id="Services"></section>
+    <section class="services container w-100" id="Services">
+        <h1>Our Ice Cream Services</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, voluptates?</p>
+        <div class="row gap-4 my-4">
+            <div class="card-body col col-sm-12 col-md-6 col-lg-3 border border-2 p-4" style="border-color: #ff69b4">
+                <div class="d-flex card-body gap-3 d-flex align-items-center mb-2">
+                    <img src="./src/img/icon-1.png" alt="">
+                    <h5>Cookies Ice Cream</h5>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel porro doloremque maxime sequi quidem at placeat, odit fugit! Omnis, dolore.</p>
+            </div>
+            <div class="card-body col col-sm-12 col-md-6 col-lg-3 border border-2 p-4" 
+            style="border-color: #ff69b4">
+                <div class="d-flex card-body gap-3 d-flex align-items-center mb-2">
+                    <img src="./src/img/icon-1.png" alt="">
+                    <h5>Cookies Ice Cream</h5>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel porro doloremque maxime sequi quidem at placeat, odit fugit! Omnis, dolore.</p>
+            </div>
+            <div class="card-body col col-sm-12 col-md-6 col-lg-3 border border-2 p-4" style="border-color: #ff69b4">
+                <div class="d-flex card-body gap-3 d-flex align-items-center mb-2">
+                    <img src="./src/img/icon-1.png" alt="">
+                    <h5>Cookies Ice Cream</h5>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel porro doloremque maxime sequi quidem at placeat, odit fugit! Omnis, dolore.</p>
+            </div>
+        </div>
+        <div class="justify-content-center d-flex align-items m-5">
+            <a class="btn btn-primary" href="#" role="button">Order Now</a>
+        </div>
+
+    </section>
 
     <!-- //////////////////////////// Blog //////////////////////////////// -->
 
-    <section class="blog container" id="Blog"></section>
+    <section class="blog container text-center w-100 my-5" id="Blog">
+    <H2>Testimonial</H2>
+
+        <div id="carouselExampleFade" class="carousel slide carousel-fade shadow">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="...">
+                <p class="px-5 py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla possimus deleniti exercitationem quod similique vero aliquid quisquam expedita minima suscipit impedit beatae reprehenderit debitis consequuntur, modi alias nesciunt ipsam excepturi aut tempora quidem! Repellendus sunt consequatur accusantium similique enim.</p>
+                <div>
+                    <p>Philia Felice</p>
+                    <img src="./src/img/icon-3.png" alt="">
+                </div>
+            </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <p>2</p>
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <p>3</p>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+    </section>
     
     <!-- //////////////////////////// Footer //////////////////////////////// -->
   
-    <footer class="container" id=""></footer>
+    <footer class=" mt-5 w-100 bg-dark" id="">
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5">
+                    <div class="">
+                        <h3 class="text-light">Contact Us</h3>
+                        <input type="text" placeholder="NAME">
+                        <input type="text" placeholder="EMAIL">
+                        <input type="text" placeholder="PHONE NUMBER">
+                        <input type="text" placeholder="MASSAGE">
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="col mt-5">
+                    <div class="row">
+                        <div class="d-flex">
+                            <img src="./src/img/icon-2.png" alt="">
+                            <p class="text-light">Making this the first true</p>
+                        </div>
+                        <div class="d-flex">
+                            <img src="./src/img/icon-2.png" alt="">
+                            <p class="text-light">Making this the first true</p>
+                        </div>
+                        <div class="d-flex">
+                            <img src="./src/img/icon-2.png" alt="">
+                            <p class="text-light">Making this the first true</p>
+                        </div>
+                        <div>
+                            <label class="text-light" for="">Newsletter</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="ENTER YOUR MAIL" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">SUBSCRIBE</button>
+                            </div>
+                            <div class="réseaux"></div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-center">
+                    <p class="text-light">2025 - Projet Ice Cream</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="./main.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>

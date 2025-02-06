@@ -1,0 +1,19 @@
+.parentPrixCercle {
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+
+.prixCercle {
+    position: absolute;
+    top: -30px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+    font-style: italic;
+}

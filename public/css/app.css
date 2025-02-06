@@ -4,6 +4,7 @@
  * Copyright 2011-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11843,6 +11844,30 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.parentPrixCercle {
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
+
+.prixCercle {
+  position: absolute;
+  top: -30px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 30px;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=app.css.map */
