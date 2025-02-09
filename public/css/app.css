@@ -11850,6 +11850,25 @@ textarea.form-control-lg {
   margin: 0;
 }
 
+header {
+  position: fixed;
+  height: auto;
+  width: 100%;
+  top: 0px;
+  z-index: 100;
+}
+
+nav {
+  border-color: rgb(253, 150, 236) !important;
+  border-bottom: solid 2px;
+}
+
+section:first-of-type {
+  width: 100vw;
+  height: auto;
+  padding-top: 5rem;
+}
+
 .parentPrixCercle {
   justify-content: center;
   display: flex;
@@ -11868,6 +11887,16 @@ textarea.form-control-lg {
   display: flex;
   font-size: 30px;
   font-style: italic;
+}
+
+.iconeContactUsParent {
+  display: flex;
+  flex-direction: row;
+  text-align: end;
+}
+
+.iconeContactUs {
+  display: flex;
 }
 
 /*# sourceMappingURL=app.css.map */

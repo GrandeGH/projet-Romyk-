@@ -1,0 +1,17 @@
+header {
+    position: fixed;
+    height: auto;
+    width: 100%;
+    top: 0px;
+    z-index: 100;
+}
+nav {
+    border-color: rgb(253, 150, 236) !important;
+    border-bottom: solid 2px;
+}
+
+.modalEdité {
+    background-color: rgb(77, 21, 21);
+    width: 100wh;
+    height: 100vh;
+}

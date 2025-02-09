@@ -6,51 +6,28 @@
     <title>Document</title>
     <link rel="stylesheet" href="./public/css/app.css">
 </head>
+
 <style>
-        /* .product-card {
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            transition: background 0.3s;
-            position: relative;
-        }
-        .product-card:hover {
-            background-color: #fff3cd;
-        }
-        .product-img {
-            max-width: 100px;
-            margin-bottom: 15px;
-        }
-        .btn-add {
-            border: 1px solid #ff69b4;
-            color: #ff69b4;
-        }
-        .btn-add:hover {
-            background-color: #ff69b4;
-            color: white;
-        }
-        .price-circle {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: white;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            font-weight: bold;
-        } */
+    /* Fond noir semi-transparent */
+    .modal-backdrop-custom {
+        background: rgba(0, 0, 0, 0.7); /* 70% d'opacité */
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: none; /* Caché par défaut */
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+    }
 </style>
+
 <body>
 
     <!-- //////////////////////////// header //////////////////////////////// -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary position-flex 
-        border border-2 border-bottom" style="border: #ff69b4;">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary position-flex;">
             <div class="container-fluid">
               <img src="./img romyk/logo.png" alt="">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,7 +53,7 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li>
-                       <a href="">Login</a> 
+                       <a id="loginBtn" href="">Login</a> 
                     </li>
                     <li>
                         <a href="">Dark Mode</a> 
@@ -86,32 +63,67 @@
             </div>
           </nav>
     </header>
+
+    <div class="modalEdité d-flex justify-content-center align-items-center" 
+    style="background-color: rgb(0, 0, 0, 0.6); ; width: 100vw; height: 100vh; position: fixed; z-index: 1000;" tabindex="-1">
+        <div class="bg-dark" style="width: 350px; height: 300px; display: flex; justify-content: center; align-items: center;">
+            <div class="modal-dialog">
+                <div class="modal-content d-flex align-items-center">
+                    <h2 class="modal-texitle text-light">Login</h2>
+                    <div style="border: 1px; border-top: white solid 1px;"></div>
+                    <input class="form-label" type="email" placeholder="EMAIL" style="border: 1px; border-bottom: solid rgb(209, 209, 209); background: none;">
+                    <input class="form-label" type="password" placeholder="PASSWORD">
+                    <button>SEND</button>
+                    <a href="">No account ? Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal test -->
+    <!-- <div class="modal-backdrop-custom" tabindex="-1" id="customModal">
+        <div class="modal-dialog">
+            <div class="modal-content p-4">
+                <h2 class="modal-title text-dark">Login</h2>
+                <input type="email" class="form-control my-2" placeholder="EMAIL">
+                <input type="password" class="form-control my-2" placeholder="PASSWORD">
+                <button class="btn btn-primary w-100">SEND</button>
+                <a href="#" class="d-block text-center mt-3">No account? Register</a>
+                <button class="btn btn-danger mt-3 w-100" id="closeModal">Close</button>
+            </div>
+        </div>
+    </div> -->
     
     <!-- //////////////////////////// Ice cream //////////////////////////////// -->
     <section class="iceCream container w-100 h-auto my-5">
         <div class="row d-flex justify-content-center align align-items-center">
-            <div class="col">
-                <h1>ICE CREAM</h1>
+            <div class="col col-sm-12 col-lg-6">
+                <h1>ICE<br>CREAM</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sed ad neque excepturi! Expedita dolore, vel incidunt eum, excepturi maiores culpa dolor sapiente explicabo quo voluptatem perferendis. Iure, eveniet optio!</p>
-                <a class="btn btn-primary" href="#" role="button">Order Now</a>
+                <a class="btn btn-primary mb-5" href="#" role="button">Order Now</a>
             </div>
-            <div class="col">
-                <img class="w-100" src="./src/img/banner-img.png" alt="">
+            <div class="col col-sm-12 col-lg-6">
+                <img class="img-fluid" style="max-width: 30em;" src="./src/img/banner-img.png" alt="">
             </div>
         </div>
     </section>
 
     <!-- //////////////////////////// About //////////////////////////////// -->
 
-    <section class="about container w-100 my-5" id="About">
-        <div class="row">
-            <div class="col ms-5">
-                <img class="w-50 ms-5" style="width: 15em;" src="./src/img/about-img.png" alt="">
-            </div>
-            <div class="col">
+    <section class="about container my-5" id="About">
+        <div class="row align-items-center">
+            <!-- Texte en premier sur mobile, mais après l'image sur desktop -->
+            <div class="col-12 col-md-6 order-md-last text-center text-md-star mb-5">
                 <h1>About Ice Cream</h1>
-                <p class="my-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis tempora, deserunt nam blanditiis reiciendis quas corrupti natus possimus culpa repellat labore cumque, animi porro corporis non esse harum perferendis at veritatis. Veniam doloremque tenetur, nam rerum est consectetur recusandae cupiditate numquam vero obcaecati voluptatum nobis soluta tempore ab aperiam molestias.</p>
+                <p class="my-4">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis tempora, deserunt nam blanditiis reiciendis quas corrupti natus possimus culpa repellat labore cumque, animi porro corporis non esse harum perferendis at veritatis. Veniam doloremque tenetur, nam rerum est consectetur recusandae cupiditate numquam vero obcaecati voluptatum nobis soluta tempore ab aperiam molestias.
+                </p>
                 <a class="btn btn-primary" href="#" role="button">Read More</a>
+            </div>
+            
+            <!-- Image (devient plus petite et centrée sur mobile) -->
+            <div class="col-12 col-md-6 text-center">
+                <img class="img-fluid" style="max-width: 20em;" src="./src/img/about-img.png" alt="About Ice Cream">
             </div>
         </div>
     </section>
@@ -147,11 +159,10 @@
                 </div>
             </div> -->
 
-
-
+        <h1 class="my-5">Our Featured Ice Cream</h1>
         <div class="row gap-4">
-            <div class="product-card col border shadow" style=>
-                <div class="bg-primary justify-content-center d-flex align-items-center p-5">
+            <div class="product-card col border shadow pt-3" style=>
+                <div class="bg-body-secondary justify-content-center d-flex align-items-center p-5">
                     <img src="./src/img/img-1.png" class="card-img-top" style="width: 15rem;" alt="...">
                 </div>
                 <div class="parentPrixCercle text-center">
@@ -162,64 +173,64 @@
                     <a href="#" class="btn btn-primary my-4">Go somewhere</a>
                 </div>
             </div>
-            <div class="product-card col border shadow" style=>
-                <div class="bg-primary justify-content-center d-flex align-items-center p-5">
+            <div class="product-card col border shadow pt-3" style=>
+                <div class="bg-body-secondary justify-content-center d-flex align-items-center p-5">
                     <img src="./src/img/img-1.png" class="card-img-top" style="width: 15rem;" alt="...">
                 </div>
-                <div class="text-center">
-                    <h4 class="bg-danger">$10</h4>
+                <div class="parentPrixCercle text-center">
+                    <h4 class="prixCercle bg-light">$10</h4>
                 </div>
                 <div class="card-body text-center">
-                    <h4 class="card-title mb-4">Strawberry Ice Cream</h4>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h4 class="card-title mt-5">Strawberry Ice Cream</h4>
+                    <a href="#" class="btn btn-primary my-4">Go somewhere</a>
                 </div>
             </div>
-            <div class="product-card col border shadow" style=>
-                <div class="bg-primary justify-content-center d-flex align-items-center p-5">
+            <div class="product-card col border shadow pt-3" style=>
+                <div class="bg-body-secondary justify-content-center d-flex align-items-center p-5">
                     <img src="./src/img/img-1.png" class="card-img-top" style="width: 15rem;" alt="...">
                 </div>
-                <div class="text-center">
-                    <h4 class="bg-danger">$10</h4>
+                <div class="parentPrixCercle text-center">
+                    <h4 class="prixCercle bg-light">$10</h4>
                 </div>
                 <div class="card-body text-center">
-                    <h4 class="card-title mb-4">Strawberry Ice Cream</h4>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h4 class="card-title mt-5">Strawberry Ice Cream</h4>
+                    <a href="#" class="btn btn-primary my-4">Go somewhere</a>
                 </div>
             </div>
-            <div class="product-card col border shadow" style=>
-                <div class="bg-primary justify-content-center d-flex align-items-center p-5">
+            <div class="product-card col border shadow pt-3" style=>
+                <div class="bg-body-secondary justify-content-center d-flex align-items-center p-5">
                     <img src="./src/img/img-1.png" class="card-img-top" style="width: 15rem;" alt="...">
                 </div>
-                <div class="text-center">
-                    <h4 class="bg-danger">$10</h4>
+                <div class="parentPrixCercle text-center">
+                    <h4 class="prixCercle bg-light">$10</h4>
                 </div>
                 <div class="card-body text-center">
-                    <h4 class="card-title mb-4">Strawberry Ice Cream</h4>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h4 class="card-title mt-5">Strawberry Ice Cream</h4>
+                    <a href="#" class="btn btn-primary my-4">Go somewhere</a>
                 </div>
             </div>
-            <div class="product-card col border shadow" style=>
-                <div class="bg-primary justify-content-center d-flex align-items-center p-5">
+            <div class="product-card col border shadow pt-3" style=>
+                <div class="bg-body-secondary justify-content-center d-flex align-items-center p-5">
                     <img src="./src/img/img-1.png" class="card-img-top" style="width: 15rem;" alt="...">
                 </div>
-                <div class="text-center">
-                    <h4 class="bg-danger">$10</h4>
+                <div class="parentPrixCercle text-center">
+                    <h4 class="prixCercle bg-light">$10</h4>
                 </div>
                 <div class="card-body text-center">
-                    <h4 class="card-title mb-4">Strawberry Ice Cream</h4>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h4 class="card-title mt-5">Strawberry Ice Cream</h4>
+                    <a href="#" class="btn btn-primary my-4">Go somewhere</a>
                 </div>
             </div>
-            <div class="product-card col border shadow" style=>
-                <div class="bg-primary justify-content-center d-flex align-items-center p-5">
+            <div class="product-card col border shadow pt-3" style=>
+                <div class="bg-body-secondary justify-content-center d-flex align-items-center p-5">
                     <img src="./src/img/img-1.png" class="card-img-top" style="width: 15rem;" alt="...">
                 </div>
-                <div class="text-center">
-                    <h4 class="bg-danger">$10</h4>
+                <div class="parentPrixCercle text-center">
+                    <h4 class="prixCercle bg-light">$10</h4>
                 </div>
                 <div class="card-body text-center">
-                    <h4 class="card-title mb-4">Strawberry Ice Cream</h4>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h4 class="card-title mt-5">Strawberry Ice Cream</h4>
+                    <a href="#" class="btn btn-primary my-4">Go somewhere</a>
                 </div>
             </div>
         </div>
@@ -274,9 +285,8 @@
         <div id="carouselExampleFade" class="carousel slide carousel-fade shadow">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
-                <p class="px-5 py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla possimus deleniti exercitationem quod similique vero aliquid quisquam expedita minima suscipit impedit beatae reprehenderit debitis consequuntur, modi alias nesciunt ipsam excepturi aut tempora quidem! Repellendus sunt consequatur accusantium similique enim.</p>
-                <div>
+                <p class="px-5 py-3 mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nulla possimus deleniti exercitationem quod similique vero aliquid quisquam expedita minima suscipit impedit beatae reprehenderit debitis consequuntur, modi alias nesciunt ipsam excepturi aut tempora quidem! Repellendus sunt consequatur accusantium similique enim.</p>
+                <div class="imgBlog">
                     <p>Philia Felice</p>
                     <img src="./src/img/icon-3.png" alt="">
                 </div>
@@ -291,11 +301,11 @@
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="carousel-control-prev-icon bg-danger" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="carousel-control-next-icon bg-danger" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
@@ -304,34 +314,36 @@
     
     <!-- //////////////////////////// Footer //////////////////////////////// -->
   
-    <footer class=" mt-5 w-100 bg-dark" id="">
-        <div class="container">
+    <footer class="mt-5 w-100 bg-dark" id="">
+        <div class="container px-5">
             <div class="row">
-                <div class="col mt-5">
-                    <div class="">
+                <div class="col col-sm-12 col-lg-4 mt-5">
+                    <form class="row gap-3">
                         <h3 class="text-light">Contact Us</h3>
                         <input type="text" placeholder="NAME">
                         <input type="text" placeholder="EMAIL">
                         <input type="text" placeholder="PHONE NUMBER">
                         <input type="text" placeholder="MASSAGE">
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="col mt-5">
-                    <div class="row">
-                        <div class="d-flex">
-                            <img src="./src/img/icon-2.png" alt="">
-                            <p class="text-light">Making this the first true</p>
-                        </div>
-                        <div class="d-flex">
-                            <img src="./src/img/icon-2.png" alt="">
-                            <p class="text-light">Making this the first true</p>
-                        </div>
-                        <div class="d-flex">
-                            <img src="./src/img/icon-2.png" alt="">
-                            <p class="text-light">Making this the first true</p>
-                        </div>
                         <div>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="col col-sm-12 col-lg-7 col my-5 ms-5 ">
+                    <div class="iconeContactUsParent row">
+                        <div class="iconeContactUs col-4 gap-3">
+                            <img src="./src/img/icon-2.png" alt="">
+                            <p class="text-light">Making this the first true</p>
+                        </div>
+                        <div class="iconeContactUs col-4 gap-3">
+                            <img src="./src/img/icon-2.png" alt="">
+                            <p class="text-light">Making this the first true</p>
+                        </div>
+                        <div class="iconeContactUs col-4 gap-3">
+                            <img src="./src/img/icon-2.png" alt="">
+                            <p class="text-light">Making this the first true</p>
+                        </div>
+                        <div class="mt-5">
                             <label class="text-light" for="">Newsletter</label>
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="Recipient's username" aria-label="ENTER YOUR MAIL" aria-describedby="button-addon2">
@@ -341,13 +353,74 @@
                         </div>
                     </div>
                 </div>
-                <hr>
+
+                <hr class="bg-light">
+
                 <div class="d-flex justify-content-center">
                     <p class="text-light">2025 - Projet Ice Cream</p>
                 </div>
             </div>
         </div>
     </footer>
+
+        <!-- Chat GTP  -->
+    <!-- <footer class="mt-5 w-100 bg-dark text-light p-4">
+        <div class="container px-5">
+            <div class="row">
+                <div class="col-12 col-lg-4 mt-5">
+                    <h3>Contact Us</h3>
+                    <form>
+                        <input type="text" class="form-control mb-3" placeholder="NAME">
+                        <input type="email" class="form-control mb-3" placeholder="EMAIL">
+                        <input type="tel" class="form-control mb-3" placeholder="PHONE NUMBER">
+                        <textarea class="form-control mb-3" placeholder="MESSAGE"></textarea>
+                        <a href="#" class="btn btn-primary w-100">Send Message</a>
+                    </form>
+                </div>
+    
+                Section des icônes et newsletter
+                <div class="col-12 col-lg-7 mt-5 ms-lg-5 text-center text-lg-start">
+                    <div class="row">
+                        <div class="col-4 d-flex align-items-center gap-3">
+                            <img src="./src/img/icon-2.png" alt="">
+                            <p>Making this the first true</p>
+                        </div>
+                        <div class="col-4 d-flex align-items-center gap-3">
+                            <img src="./src/img/icon-2.png" alt="">
+                            <p>call : 04 60 34 12 24</p>
+                        </div>
+                        <div class="col-4 d-flex align-items-center gap-3">
+                            <img src="./src/img/icon-2.png" alt="">
+                            <p>Email : fff@aaaa.com</p>
+                        </div>
+                    </div>
+    
+            
+                    <div class="mt-4">
+                        <label for="newsletter" class="form-label">Newsletter</label>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your mail" aria-label="Newsletter" aria-describedby="subscribe-btn">
+                            <button class="btn btn-outline-secondary" type="button" id="subscribe-btn">SUBSCRIBE</button>
+                        </div>
+                    </div>
+    
+                
+                    <div class="d-flex justify-content-center justify-content-lg-end gap-3">
+                        <a href="#"><img src="./src/img/facebook-icon.png" alt="Facebook"></a>
+                        <a href="#"><img src="./src/img/twitter-icon.png" alt="Twitter"></a>
+                        <a href="#"><img src="./src/img/instagram-icon.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+  
+            <hr class="bg-light">
+    
+
+            <div class="d-flex justify-content-center">
+                <p>2025 - Projet Ice Cream</p>
+            </div>
+        </div>
+    </footer> -->
 
     <script src="./main.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
