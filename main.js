@@ -4,14 +4,17 @@ const btnDarkMode = document.querySelector(".btnDarkMode")
 const darkMode = document.querySelector(".darkMode")
 const section = document.querySelectorAll("body")
 const navbar = document.querySelector(".navbar")
+const prixCercle = document.querySelectorAll(".prixCercle")
 
 btnDarkMode.addEventListener("click", function () {
     section.forEach(e => {
         e.classList.toggle("darkMode")
     })
-    navbar.classList.remove("bg-body-tertiary")
+    navbar.classList.toggle("bg-body-tertiary")
     navbar.classList.toggle("navbarDarkMode")
 
+    prixCercle.classList.toggle("bg-light")
+    prixCercle.classList.toggle("prixCercleDarkMode")
 })
 
 

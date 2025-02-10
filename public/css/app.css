@@ -11859,6 +11859,10 @@ textarea.form-control-lg {
   background-color: rgb(83, 82, 82);
 }
 
+.prixCercleDarkMode {
+  background-color: rgb(83, 82, 82);
+}
+
 header {
   position: fixed;
   height: auto;
