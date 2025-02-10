@@ -11850,6 +11850,15 @@ textarea.form-control-lg {
   margin: 0;
 }
 
+.darkMode {
+  background-color: rgb(43, 43, 43);
+  color: white;
+}
+
+.navbarDarkMode {
+  background-color: rgb(83, 82, 82);
+}
+
 header {
   position: fixed;
   height: auto;
