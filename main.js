@@ -5,6 +5,8 @@ const darkMode = document.querySelector(".darkMode")
 const section = document.querySelectorAll("body")
 const navbar = document.querySelector(".navbar")
 const prixCercle = document.querySelectorAll(".prixCercle")
+const navLink = document.querySelectorAll(".nav-link")
+
 
 btnDarkMode.addEventListener("click", function () {
     section.forEach(e => {
@@ -13,8 +15,15 @@ btnDarkMode.addEventListener("click", function () {
     navbar.classList.toggle("bg-body-tertiary")
     navbar.classList.toggle("navbarDarkMode")
 
-    prixCercle.classList.toggle("bg-light")
-    prixCercle.classList.toggle("prixCercleDarkMode")
+    prixCercle.forEach(element => {
+        element.classList.toggle("prixCercleDarkMode")
+        element.classList.toggle("bg-light")
+        element.classList.toggle("bg-dark")
+    })
+
+    navLink.forEach(element2 => {
+        element2.classList.toggle("text-light")
+    })
 })
 
 
@@ -47,51 +56,27 @@ registerToLogin.addEventListener("click", function (e) {
     modalRegister.classList.add("d-none")
 })
 
-// // Login
-// const btnLogin = document.querySelector(".btnLogin")
-// const modal = document.querySelector(".customModal")
-// let btnLoginClose = document.querySelector(".btnLoginClose") // pas encore attribué
-// let btnInscription = document.querySelector(".btnInscription") // pas encore attribué
-// let btnInscriptionClose = document.querySelector(".btnInscriptionClose") // pas encore attribué
-
-// btnLogin.addEventListener("click", function (event) {
-//     event.preventDefault()
-//     modalRegister.style.display = "none"
-//     modal.style.display = "flex"
-// })
-
-// btnLoginClose.addEventListener("click", function () {
-//     modal.style.display = "none"
-// })
-
-// // Register
-// const btnRegister = document.querySelector(".btnRegister")
-// const modalRegister = document.querySelector(".modalRegister")
-// const btnRegisterClose = document.querySelector("btnRegisterClose")
-
-// btnRegister.addEventListener("click", function () {        
-//     e.defaultPrevented()
-//     modalRegister.style.display = "flex"
-//     modal.style.display = "none"
-
-
-// })
-
-// btnRegisterClose.addEventListener("click", function () {
-//     modalRegister.style.display = "none"
-// })
-
 // ///////////////////////////// Caroussell /////////////////////////////
 
 
 let myCarousel = new bootstrap.Carousel(document.querySelector("#carouselExampleFade"), {
-    interval: 3000, // Défilement toutes les 3 secondes
-    pause: "hover", // Pause quand la souris est dessus
-    wrap: true // Boucle infinie
+    interval: 3000, 
+    wrap: true 
 });
 
 ///////////////////////////// Navbar Réactive /////////////////////////////
 
+const navbarToggler = document.querySelector(".navbar-toggler");
+const navbarCollapse = document.querySelector("#navbarNav");
+
+navbarToggler.addEventListener("click", function () {
+    const isExpanded = navbarToggler.getAttribute("aria-expanded") === "true";
+    
+    // afficher le navbar si on clique le toggle 
+    navbarCollapse.classList.toggle("show");
+
+    navbarToggler.setAttribute("aria-expanded", !isExpanded);
+});
 
 
 

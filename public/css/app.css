@@ -11902,12 +11902,6 @@ section:first-of-type {
   font-style: italic;
 }
 
-.iconeContactUsParent {
-  display: flex;
-  flex-direction: row;
-  text-align: end;
-}
-
 .iconeContactUs {
   display: flex;
 }
