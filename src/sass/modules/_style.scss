@@ -1,6 +1,21 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    // outline: 1px red solid;
+}
+
+// HOVER BOUTON ROSE
+
+.hoverRose {
+    color: white;
+    background-color: #ff69b4;
+    // transition: 0.3s ease-in;
+}
+
+.hoverRose:hover {
+    border: 1px #ff69b4 solid;
+    color: #ff69b4;
+    background-color: transparent;
 }
 
 // DARK MODE 
@@ -32,3 +47,4 @@ body, .navbar, .prixCercle, #carouselExampleFade {
     box-shadow: 4px 4px 4px 4px rgba(255, 255, 255, 1.0);
     transition: 1s ease-in-out;
 }
+

@@ -2,10 +2,15 @@
     margin: auto;
 }
 
-.iconeContactUs {
-    display: flex;
-}
 
 .iconeRéseau {
     color: black !important;
+}
+
+footer {
+    i:hover {
+        color:white !important;
+        background-color: black !important;
+        transition: 0.3s ease-in-out;
+    }
 }

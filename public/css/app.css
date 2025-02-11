@@ -11850,6 +11850,17 @@ textarea.form-control-lg {
   margin: 0;
 }
 
+.hoverRose {
+  color: white;
+  background-color: #ff69b4;
+}
+
+.hoverRose:hover {
+  border: 1px #ff69b4 solid;
+  color: #ff69b4;
+  background-color: transparent;
+}
+
 body, .navbar, .prixCercle, #carouselExampleFade {
   transition: 1s ease-in-out;
 }
@@ -11904,7 +11915,7 @@ nav {
 .btnClose2 {
   font-size: 23px;
   position: absolute;
-  top: -38px;
+  top: -36px;
   right: 11px;
 }
 .btnClose2 a {
@@ -11919,7 +11930,7 @@ section:first-of-type {
 }
 
 .imgBanner {
-  animation: imgbanner 3s ease-in-out infinite;
+  animation: imgbanner 5s ease-in-out infinite;
 }
 
 @keyframes imgbanner {
@@ -11933,16 +11944,19 @@ section:first-of-type {
     transform: translateY(0px);
   }
 }
+#Featured a {
+  border: 1px solid #ff69b4;
+  color: #ff69b4;
+}
+#Featured a:hover {
+  background-color: #ff69b4;
+  color: white;
+}
+
 .parentPrixCercle {
   justify-content: center;
   display: flex;
   position: relative;
-}
-
-.product-card {
-  width: 380px;
-  height: auto;
-  margin: auto;
 }
 
 .prixCercle {
@@ -11960,6 +11974,7 @@ section:first-of-type {
 }
 
 .featuredHover:hover {
+  height: 320px;
   background-color: rgb(238, 161, 106) !important;
   transition: 0.3s;
 }
@@ -11968,12 +11983,14 @@ section:first-of-type {
   margin: auto;
 }
 
-.iconeContactUs {
-  display: flex;
-}
-
 .iconeRéseau {
   color: black !important;
+}
+
+footer i:hover {
+  color: white !important;
+  background-color: black !important;
+  transition: 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=app.css.map */

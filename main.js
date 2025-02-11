@@ -63,11 +63,38 @@ registerToLogin.addEventListener("click", function (e) {
 
 // ///////////////////////////// Caroussell /////////////////////////////
 
+let carousel = document.querySelector("#carouselExample");
+let items = carousel.querySelectorAll(".carousel-item");
+let currentIndex = 0;
+let interval = 3000; 
 
-let myCarousel = new bootstrap.Carousel(document.querySelector("#carouselExampleFade"), {
-    interval: 3000, 
-    wrap: true 
+function showSlide(index) {
+    items.forEach((item, i) => {
+        item.classList.toggle("active", i === index);
+    });
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % items.length;
+    showSlide(currentIndex);
+}
+
+let autoSlide = setInterval(nextSlide, interval);
+
+document.querySelector(".carousel-control-next").addEventListener("click", function () {
+    clearInterval(autoSlide); 
+    nextSlide();
+    autoSlide = setInterval(nextSlide, interval); 
 });
+
+document.querySelector(".carousel-control-prev").addEventListener("click", function () {
+    clearInterval(autoSlide);
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    showSlide(currentIndex);
+    autoSlide = setInterval(nextSlide, interval);
+});
+
+
 
 ///////////////////////////// Navbar Réactive /////////////////////////////
 

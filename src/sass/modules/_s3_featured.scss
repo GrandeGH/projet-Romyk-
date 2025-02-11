@@ -1,15 +1,27 @@
+#Featured {
+    a {
+        border: 1px solid #ff69b4;
+        color: #ff69b4;
+    }
+    a:hover {
+        background-color: #ff69b4;
+        color: white;
+    }
+}
+
+
+
 .parentPrixCercle {
     justify-content: center;
     display: flex;
     position: relative;
 }
 
-.product-card {
-    width: 380px;
-    height: auto;
-
-    margin: auto;
-}
+// .product-card {
+//     width: 25rem;
+//     height: auto;
+//     // margin: auto;
+// }
 
 .prixCercle {
     position: absolute;
@@ -26,6 +38,7 @@
 }
 
 .featuredHover:hover {
+    height: 320px;
     background-color: rgb(238, 161, 106) !important;
     transition: 0.3s;
 }
