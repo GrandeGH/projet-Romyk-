@@ -4,6 +4,13 @@
     position: relative;
 }
 
+.product-card {
+    width: 380px;
+    height: auto;
+
+    margin: auto;
+}
+
 .prixCercle {
     position: absolute;
     top: -30px;
@@ -16,4 +23,9 @@
     display: flex;
     font-size: 30px;
     font-style: italic;
+}
+
+.featuredHover:hover {
+    background-color: rgb(238, 161, 106) !important;
+    transition: 0.3s;
 }

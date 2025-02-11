@@ -11850,17 +11850,31 @@ textarea.form-control-lg {
   margin: 0;
 }
 
+body, .navbar, .prixCercle, #carouselExampleFade {
+  transition: 1s ease-in-out;
+}
+
 .darkMode {
   background-color: rgb(43, 43, 43);
   color: white;
+  transition: 1s ease-in-out;
 }
 
 .navbarDarkMode {
   background-color: rgb(83, 82, 82);
+  transition: 1s ease-in-out;
 }
 
 .prixCercleDarkMode {
   background-color: rgb(83, 82, 82);
+  transition: 1s ease-in-out;
+}
+
+.carouselExampleFadeDarkMode {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 4px 4px 4px rgb(255, 255, 255);
+  transition: 1s ease-in-out;
 }
 
 header {
@@ -11876,16 +11890,59 @@ nav {
   border-bottom: solid 2px;
 }
 
+.btnClose {
+  font-size: 23px;
+  position: absolute;
+  top: -40px;
+  right: 15px;
+}
+.btnClose a {
+  text-decoration: none;
+  color: white;
+}
+
+.btnClose2 {
+  font-size: 23px;
+  position: absolute;
+  top: -38px;
+  right: 11px;
+}
+.btnClose2 a {
+  text-decoration: none;
+  color: white;
+}
+
 section:first-of-type {
   width: 100vw;
   height: auto;
   padding-top: 5rem;
 }
 
+.imgBanner {
+  animation: imgbanner 3s ease-in-out infinite;
+}
+
+@keyframes imgbanner {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 .parentPrixCercle {
   justify-content: center;
   display: flex;
   position: relative;
+}
+
+.product-card {
+  width: 380px;
+  height: auto;
+  margin: auto;
 }
 
 .prixCercle {
@@ -11902,8 +11959,21 @@ section:first-of-type {
   font-style: italic;
 }
 
+.featuredHover:hover {
+  background-color: rgb(238, 161, 106) !important;
+  transition: 0.3s;
+}
+
+.iconeContactUsParent {
+  margin: auto;
+}
+
 .iconeContactUs {
   display: flex;
+}
+
+.iconeRéseau {
+  color: black !important;
 }
 
 /*# sourceMappingURL=app.css.map */

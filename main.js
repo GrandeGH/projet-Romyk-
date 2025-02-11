@@ -6,7 +6,7 @@ const section = document.querySelectorAll("body")
 const navbar = document.querySelector(".navbar")
 const prixCercle = document.querySelectorAll(".prixCercle")
 const navLink = document.querySelectorAll(".nav-link")
-
+const carouselExample = document.getElementById("carouselExampleFade")
 
 btnDarkMode.addEventListener("click", function () {
     section.forEach(e => {
@@ -24,6 +24,11 @@ btnDarkMode.addEventListener("click", function () {
     navLink.forEach(element2 => {
         element2.classList.toggle("text-light")
     })
+
+    carouselExample.classList.toggle("carouselExampleFadeDarkMode")
+    carouselExample.classList.toggle("shadow")
+
+
 })
 
 

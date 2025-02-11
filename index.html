@@ -10,8 +10,8 @@
 <body>
 
     <!-- //////////////////////////// header //////////////////////////////// -->
+    
     <header>
-
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -40,7 +40,7 @@
                         </li>
                     </ul>
                     <div class="d-flex gap-3">
-                        <a class="btn loginBtn" style="background-color: #ff69b4; color: white;" href="#">Login</a>
+                        <a class="btn loginBtn" style="background-color: #ff69b4; color: white;" href="#"><i class="bi bi-person-fill"></i>Login</a>
                         <i class="btnDarkMode btn bi bi-moon-fill"></i>
                     </div>
                 </div>
@@ -51,7 +51,8 @@
     <!-- modal login -->
     <div class="modalLogin modal d-none d-flex justify-content-center align-items-center" tabindex="-1" style="width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.5); position: fixed;">
         <div class="bg-dark text-center align-items-center d-flex" style="width: 300px; height: 300px;">
-            <div class="">
+            <div class="" style="position: relative;">
+                <span class="btnClose text-light"><a href="">X</a></span>
                 <h2 class="text-light">Login</h2>
                 <form class="m-3">
                     <input class="mb-2"  type="email" placeholder="EMAIL">
@@ -63,11 +64,11 @@
         </div>
     </div>
 
-
        <!-- modal register -->
        <div class="modalRegister modal d-none d-flex justify-content-center align-items-center" tabindex="-1" style="width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.5); position: fixed;">
         <div class="bg-dark text-center align-items-center d-flex" style="width: 300px; height: 360px;">
-            <div class="">
+            <div class="" style="position: relative;">
+                <span class="btnClose2 text-light"><a href="">X</a></span>
                 <h2 class="text-light">register</h2>
                 <form class="m-3">
                     <input class="mb-2"  type="email" placeholder="EMAIL">
@@ -82,6 +83,7 @@
     </div>
 
     <!-- //////////////////////////// Ice cream //////////////////////////////// -->
+    
     <section class="iceCream container w-100 h-auto my-5" id="IceCream">
         <div class="row d-flex justify-content-center align-items-center">
             <div class="col-12 col-lg-6 text-center text-lg-start">
@@ -90,7 +92,7 @@
                 <a class="btn mb-5 px-4 py-2" style="background-color: #ff69b4; color: white;" href="#" role="button">Order Now</a>
             </div>
             <div class="col-12 col-lg-6 text-center">
-                <img class="img-fluid mb-4" style="width: 100;" src="./src/img/banner-img.png" alt="Ice Cream">
+                <img class="imgBanner img-fluid mb-4" style="width: 50;" src="./src/img/banner-img.png" alt="Ice Cream">
             </div>
         </div>
     </section>
@@ -118,40 +120,16 @@
 
     <!-- //////////////////////////// Featured //////////////////////////////// -->
     
-    <section class="featured container my-5" id="Featured">
-
-            <!-- <div class="row">
-                <div class="col col-mb-4">
-                    <div class=" border shadow">
-                        <div class="price-circle">$10</div>
-                        <img src="https://via.placeholder.com/" alt="Sundae" class="">
-                        <p>Strawberry Ice Cream</p>
-                        <button class="btn btn-add">Add To Cart</button>
-                    </div>
-                </div>
-                <div class="col col-mb-4">
-                    <div class="border shadow">
-                        <div class="price-circle">$10</div>
-                        <img src="https://via.placeholder.com/100" alt="Cone" class="product-img">
-                        <p>Strawberry Ice Cream</p>
-                        <button class="btn btn-add">Add To Cart</button>
-                    </div>
-                </div>
-                <div class="col col-mb-4">
-                    <div class="border shadow">
-                        <div class="price-circle">$10</div>
-                        <img src="https://via.placeholder.com/100" alt="Sundae" class="product-img">
-                        <p>Strawberry Ice Cream</p>
-                        <button class="btn btn-add">Add To Cart</button>
-                    </div>
-                </div>
-            </div> -->
-
-        <h1 class="my-5">Our Featured Ice Cream</h1>
-        <div class="row gap-4">
-            <div class="product-card col border shadow pt-3" style=>
-                <div class="bg-body-secondary justify-content-center d-flex align-items-center p-5">
-                    <img src="./src/img/img-1.png" class="card-img-top" style="width: 15rem;" alt="...">
+    <section class="featured container my-5" id="Featured" style="position:relative">
+        <div class="mb-3 mt-5">
+            <h1>Our Featured Ice Cream</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, doloremque?</p>
+        </div>
+        <div class="row">
+            <!-- 1er -->
+            <div class="product-card col col-md-6 col-lg-4 mb-4 border shadow pt-3">
+                <div class="featuredHover bg-body-secondary justify-content-center d-flex align-items-center p-5" style="max-height: 320px;">
+                    <img src="./src/img/img-1.png" class="card-img-top" style="width: 15em;" alt="...">
                 </div>
                 <div class="parentPrixCercle text-center">
                     <h4 class="prixCercle bg-light">$10</h4>
@@ -161,8 +139,9 @@
                     <a href="#" style="border-color: #ff69b4; color: #ff69b4;" class="btn rounded-5 my-4">Go somewhere</a>
                 </div>
             </div>
-            <div class="product-card col border shadow pt-3" style=>
-                <div class="bg-body-secondary justify-content-center d-flex align-items-center p-5">
+            <!-- 2e -->
+            <div class="product-card col col-md-6 col-lg-4 mb-4 border shadow pt-3" style=>
+                <div class="featuredHover bg-body-secondary justify-content-center d-flex align-items-center p-5" style="max-height: 320px;">
                     <img src="./src/img/img-2.png" class="card-img-top" style="width: 5.6rem;" alt="...">
                 </div>
                 <div class="parentPrixCercle text-center">
@@ -173,8 +152,9 @@
                     <a href="#" style="border-color: #ff69b4; color: #ff69b4;" class="btn rounded-5 my-4">Go somewhere</a>
                 </div>
             </div>
-            <div class="product-card col border shadow pt-3" style=>
-                <div class="bg-body-secondary justify-content-center d-flex align-items-center p-5">
+            <!-- 3e -->
+            <div class="product-card col col-md-6 col-lg-4 mb-4 border shadow pt-3" style=>
+                <div class="featuredHover bg-body-secondary justify-content-center d-flex align-items-center p-5" style="max-height: 320px;">
                     <img src="./src/img/img-3.png" class="card-img-top" style="width: 15rem;" alt="...">
                 </div>
                 <div class="parentPrixCercle text-center">
@@ -185,8 +165,9 @@
                     <a href="#" style="border-color: #ff69b4; color: #ff69b4;" class="btn rounded-5 my-4">Go somewhere</a>
                 </div>
             </div>
-            <div class="product-card col border shadow pt-3" style=>
-                <div class="bg-body-secondary justify-content-center d-flex align-items-center p-5">
+            <!-- 4e -->
+            <div class="product-card col col-md-6 col-lg-4 mb-4 border shadow pt-3" style=>
+                <div class="featuredHover bg-body-secondary justify-content-center d-flex align-items-center p-5" style="max-height: 320px;">
                     <img src="./src/img/img-4.png" class="card-img-top" style="width: 13rem;" alt="...">
                 </div>
                 <div class="parentPrixCercle text-center">
@@ -197,8 +178,9 @@
                     <a href="#" style="border-color: #ff69b4; color: #ff69b4;" class="btn rounded-5 my-4">Go somewhere</a>
                 </div>
             </div>
-            <div class="product-card col border shadow pt-3" style=>
-                <div class="bg-body-secondary justify-content-center d-flex align-items-center p-5">
+            <!-- 5e  -->
+            <div class="product-card col col-md-6 col-lg-4 mb-4 border shadow pt-3" style=>
+                <div class="featuredHover bg-body-secondary justify-content-center d-flex align-items-center p-5" style="max-height: 320px;">
                     <img src="./src/img/img-1.png" class="card-img-top" style="width: 15rem;" alt="...">
                 </div>
                 <div class="parentPrixCercle text-center">
@@ -209,9 +191,10 @@
                     <a href="#" style="border-color: #ff69b4; color: #ff69b4;" class="btn rounded-5 my-4">Go somewhere</a>
                 </div>
             </div>
-            <div class="product-card col border shadow pt-3" style=>
-                <div class="bg-body-secondary justify-content-center d-flex align-items-center p-5">
-                    <img src="./src/img/img-1.png" class="card-img-top" style="width: 15rem;" alt="...">
+            <!-- 6e  -->
+            <div class="product-card col col-md-6 col-lg-4 mb-4 border shadow pt-3" style=>
+                <div class="featuredHover bg-body-secondary justify-content-center d-flex align-items-center p-5" style="max-height: 320px; height: 20rem;">
+                    <img src="./src/img/img-5.png" class="card-img-top" style="width: 18rem;" alt="...">
                 </div>
                 <div class="parentPrixCercle text-center">
                     <h4 class="prixCercle bg-light">$10</h4>
@@ -227,13 +210,18 @@
             <a class="btn px-4 py-2" href="#" style="background-color: #ff69b4; color: white;"  role="button">See More</a>
         </div>
        
+        <img src="./src/img/img-6.png" alt="" style=" width: 10rem; position: absolute; bottom: 10px; z-index: -10;">
     </section>
+
 
     <!-- //////////////////////////// Services //////////////////////////////// -->
 
+
     <section class="services container w-100" id="Services">
-        <h1>Our Ice Cream Services</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, voluptates?</p>
+        <div class="mb-3 mt-5">
+            <h1>Our Ice Cream Services</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, doloremque?</p>
+        </div>
         <div class="row gap-4 my-4">
             <div class="card-body col col-sm-12 col-md-6 col-lg-3 border border-2 p-4" style="border-color: #ff69b4 !important">
                 <div class="d-flex card-body gap-3 d-flex align-items-center mb-2">
@@ -261,15 +249,15 @@
         <div class="justify-content-center d-flex align-items m-5">
             <a class="btn px-4 py-2" style="background-color: #ff69b4; color: white;" href="#" role="button">Read More</a>
         </div>
-
     </section>
+
 
     <!-- //////////////////////////// Blog //////////////////////////////// -->
 
+
     <section class="blog container text-center w-100 my-5" id="Blog">
         <h2>Testimonial</h2>
-    
-        <div id="carouselExampleFade" class="carousel slide carousel-fade shadow" data-bs-ride="carousel">
+        <div id="carouselExampleFade" class="carousel bg slide carousel-fade shadow" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <p class="px-5 py-3 mt-3">
@@ -320,13 +308,15 @@
         <div class="container px-5">
             <div class="row">
                 <div class="col-sm-12 col-lg-4 mt-5">
-                    <form class="row gap-3">
-                        <h3 class="text-light">Contact Us</h3>
-                        <input type="text" placeholder="NAME">
-                        <input type="text" placeholder="EMAIL">
-                        <input type="text" placeholder="PHONE NUMBER">
-                        <input type="text" placeholder="MASSAGE">
-                        <a href="#" style="background-color: #ff69b4; color: white;" class="btn">Go somewhere</a>
+                    <h3 class="text-light mb-4">Contact Us</h3>
+                    <form class="row gap-3 me-2">
+                        <input class="" style="background-color: transparent;" type="text" placeholder="NAME">
+                        <input class="" style="background-color: transparent;" type="email" placeholder="EMAIL">
+                        <input class="" style="background-color: transparent;" type="number" placeholder="PHONE NUMBER">
+                        <input class="" style="background-color: transparent;" type="text" placeholder="MESSAGE">
+                        <div class="">
+                            <a href="#" style="background-color: #ff69b4; color: white;" class="btn px-4">SEND</a>
+                        </div>
                     </form>
                 </div>
                 <!-- // icone et service  -->
@@ -344,21 +334,28 @@
                             <i class="bi bi-envelope-fill text-light"></i>
                             <p class="text-light">Email : GeorgesGrande96@gmail.com</p>
                         </div>
-                        <div class="mt-5">
-                            <label class="text-light form-label">Newsletter</label>
+                        <div class="mt-5 mb-2">
+                            <label class="text-light form-label mb-2">Newsletter</label>
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="Recipient's username" aria-label="ENTER YOUR MAIL" aria-describedby="button-addon2">
                                 <button class="btn" type="button" style="background-color: #ff69b4; color: white;" id="button-addon2">SUBSCRIBE</button>
                             </div>
                         </div>
 
-                        <div class="réseaux gap-3">                                        
-                            <i class="bi bi-facebook bg-body-secondary py-1 px-2 rounded-5 fs-2" ></i>
-                            <i class="bi bi-twitter bg-body-secondary py-1 px-2 rounded-5 fs-2" ></i>
-                            <i class="bi bi-instagram bg-body-secondary py-1 px-2 rounded-5 fs-2" ></i>
-                            <i class="bi bi-linkedin bg-body-secondary py-1 px-2 rounded-5 fs-2" ></i>
+                        <div class="réseaux d-flex gap-3">
+                            <div>                                        
+                                <i class="iconeRéseau bi bi-facebook bg-body-secondary py-1 px-2 rounded-5 fs-2" ></i>
+                            </div>
+                            <div> 
+                                <i class="iconeRéseau bi bi-twitter bg-body-secondary py-1 px-2 rounded-5 fs-2" ></i>
+                            </div>
+                            <div> 
+                                <i class="iconeRéseau bi bi-instagram bg-body-secondary py-1 px-2 rounded-5 fs-2" ></i>
+                            </div>
+                            <div> 
+                                <i class="iconeRéseau bi bi-linkedin bg-body-secondary py-1 px-2 rounded-5 fs-2" ></i>
+                            </div>
                         </div>
-                        
                     </div>
                 </div>
 

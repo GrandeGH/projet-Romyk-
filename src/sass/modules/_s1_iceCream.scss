@@ -3,3 +3,19 @@ section:first-of-type {
     height: auto;
     padding-top: 5rem;
 }
+
+.imgBanner {
+    animation: imgbanner 3s ease-in-out infinite;
+}
+
+@keyframes imgbanner {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}

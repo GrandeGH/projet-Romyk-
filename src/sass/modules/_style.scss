@@ -3,15 +3,32 @@
     margin: 0;
 }
 
+// DARK MODE 
+body, .navbar, .prixCercle, #carouselExampleFade {
+    transition: 1s ease-in-out;
+}
+
 .darkMode {
     background-color: rgb(43, 43, 43);
     color: white;
+    transition: 1s ease-in-out;
+
 }
 
 .navbarDarkMode {
     background-color: rgb(83, 82, 82);
+    transition: 1s ease-in-out;
 }
 
 .prixCercleDarkMode {
     background-color: rgb(83, 82, 82);
+    transition: 1s ease-in-out;
+
+}
+
+.carouselExampleFadeDarkMode {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 4px 4px 4px 4px rgba(255, 255, 255, 1.0);
+    transition: 1s ease-in-out;
 }

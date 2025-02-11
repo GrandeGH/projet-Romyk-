@@ -10,12 +10,26 @@ nav {
     border-bottom: solid 2px;
 }
 
-// .navbar-collapse {
-//     height: 0;
-//     overflow:  hidden;
-//     transition: height 0.3s ease-in-out;
-// }
+//modal
 
-// .navbar-collapse.show {
-//     height: auto;
-// }
+.btnClose {
+    font-size: 23px;
+    position: absolute;
+    top: -40px;
+    right: 15px;
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.btnClose2 {
+    font-size: 23px;
+    position: absolute;
+    top: -38px;
+    right: 11px;
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
